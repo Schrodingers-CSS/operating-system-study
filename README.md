@@ -18,11 +18,12 @@
 
 ## 🖐 참여자
 
-| 참가자 이름 |   소속    |                 Github 프로필                 |            정리자료             |
-| :---------: | :-------: | :-------------------------------------------: | :-----------------------------: |
-|   박영호    | Backpackr |  [hexdrinker](https://github.com/hexdrinker)  | [:link:](hexdrinker/README.md)  |
-|   조성빈    | 무역회사  |   [chobobdev](https://github.com/chobobdev)   |  [:link:](chobobdev/README.md)  |
-|   이우림    | 스타트업  | [NoMoreBuild](https://github.com/NoMoreBuild) | [:link:](nomorebuild/README.md) |
+| 참가자 이름 |   소속    |                  Github 프로필                  |             정리자료             |
+| :---------: | :-------: | :---------------------------------------------: | :------------------------------: |
+|   박영호    | Backpackr |   [hexdrinker](https://github.com/hexdrinker)   |  [:link:](hexdrinker/README.md)  |
+|   조성빈    | 무역회사  |    [chobobdev](https://github.com/chobobdev)    |  [:link:](chobobdev/README.md)   |
+|   이우림    | 스타트업  |  [NoMoreBuild](https://github.com/NoMoreBuild)  | [:link:](nomorebuild/README.md)  |
+|   김리하    |     -     | [bravacoreana](https://github.com/bravacoreana) | [:link:](bravacoreana/README.md) |
 
 <div align="center">
   
