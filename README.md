@@ -27,6 +27,7 @@
 |   조형관    |     -     |  [vanillaLatteJS](https://github.com/devgony)   | [:link:](vanillaLatteJS/README.md) |
 |   최수현    |     -     |  [sheony-1124](https://github.com/sheony-1124)  |  [:link:](sheony-1124/README.md)   |
 |   이남호    |     -     | [SudHimmeLi](https://www.github.com/sudhimmeli) |   [:link:](sudhimmeli/README.md)   |
+|   채혜민    |     -     |   [dkssyddico](https://github.com/dkssyddico)   |   [:link:](dkssyddico/README.md)   |
 
 <div align="center">
 
