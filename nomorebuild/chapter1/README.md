@@ -1,7 +1,9 @@
-<center>
-# Opreating System : Concepts 챕터 1
-</center>
+<h1 align="center">
+    Opreating System : Concepts 챕터 1
+</h1>
+
 ## 서론
+
 운영체제는 컴퓨터 하드웨어를 관리하는 프로그램이다.
 또한, 응용 프로그램을 위한 기반을 제공하며 컴퓨터 하드웨어 사이의 중계자 역할을 수행한다.
 
@@ -29,7 +31,7 @@
 운영체제는 정부(Government)와 유사하다. 운영체제는 정부처럼 그 자체로는 유용한 기능은 수행하지 못한다.
 운영체제는 단순히 다른 프로그램이 유용한 작업을 할 수 있는 **환경**을 제공한다.
 
-![os-layout](_./img/os-layout/png_)
+<img src="./img/os-layer.png" alt="os-layer" align="center">
 <small>컴퓨터 시스템 구조에 대한 계략적 구성도</small>
 
 ## 관점
