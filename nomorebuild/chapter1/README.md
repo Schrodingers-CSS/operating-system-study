@@ -31,7 +31,9 @@
 운영체제는 정부(Government)와 유사하다. 운영체제는 정부처럼 그 자체로는 유용한 기능은 수행하지 못한다.
 운영체제는 단순히 다른 프로그램이 유용한 작업을 할 수 있는 **환경**을 제공한다.
 
-<img src="./img/os-layer.png" alt="os-layer" align="center">
+<p align="center">
+    <img src="./img/os-layer.png" alt="os-layer" width="500px" height="auto">
+</p>
 <small>컴퓨터 시스템 구조에 대한 계략적 구성도</small>
 
 ## 관점
