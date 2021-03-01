@@ -26,9 +26,10 @@
 |   김리하    |     -     | [bravacoreana](https://github.com/bravacoreana) |  [:link:](bravacoreana/README.md)  |
 |   조형관    |     -     |  [vanillaLatteJS](https://github.com/devgony)   | [:link:](vanillaLatteJS/README.md) |
 |   최수현    |     -     |  [sheony-1124](https://github.com/sheony-1124)  |  [:link:](sheony-1124/README.md)   |
+|   이남호    |     -     | [SudHimmeLi](https://www.github.com/sudhimmeli) |   [:link:](sudhimmeli/README.md)   |
 
 <div align="center">
-  
+
 <sub><sup>Written by <a href="https://github.com/hexdrinker">@hexdrinker</a></sup></sub><small>🍔</small>
 
 </div>
