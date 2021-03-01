@@ -22,9 +22,16 @@
 
 난이도는 **주관적**인 의견입니다.
 
-| Date | Chapter | Title | Difficulty | Keyword | Link |
-| :--: | :-----: | :---: | :--------: | :-----: | :--: |
-|      |         |       |            |         |      |
+| Date | Chapter |           Title            | Difficulty | Keyword |                   Link                    |
+| :--: | :-----: | :------------------------: | :--------: | :-----: | :---------------------------------------: |
+|      |    1    |        Introduction        |            |         | 📍 [READ](/bravacoreana/01-introduction/) |
+|      |    2    | Oprating-System Structures |            |         |                                           |
+|      |    3    |         Processes          |            |         |                                           |
+|      |    4    |   Threads & Concurrency    |            |         |                                           |
+|      |    5    |       CPU Scheduling       |            |         |                                           |
+|      |    6    |   Synchronization Tools    |            |         |                                           |
+|      |    7    |  Synchronization Examples  |            |         |                                           |
+|      |   16    |          Security          |            |         |                                           |
 
 <br>
 
