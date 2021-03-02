@@ -7,7 +7,7 @@
 <h3>Seongbin Cho</h3>
 <p>Backend Engineer @무역회사</p>
 
-![Status](https://img.shields.io/badge/MunziYa%20Hard-blue.svg)
+![Status](https://img.shields.io/badge/MunziYa-blue.svg)
 ![Start Date](https://img.shields.io/badge/Start%20Date-2021--03--01-23d16b.svg)
 
 
