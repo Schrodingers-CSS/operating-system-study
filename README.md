@@ -28,7 +28,7 @@
 |   최수현    |     -     |  [sheony-1124](https://github.com/sheony-1124)  |  [:link:](sheony-1124/README.md)   |
 |   이남호    |     -     | [SudHimmeLi](https://www.github.com/sudhimmeli) |   [:link:](sudhimmeli/README.md)   |
 |   채혜민    |     -     |   [dkssyddico](https://github.com/dkssyddico)   |   [:link:](dkssyddico/README.md)   |
-
+|   김우리    | Diva Corp |   [woori3104](https://github.com/woori3104)   |   [:link:](woori3104/README.md)   |
 <div align="center">
 
 <sub><sup>Written by <a href="https://github.com/hexdrinker">@hexdrinker</a></sup></sub><small>🍔</small>
