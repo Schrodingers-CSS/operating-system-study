@@ -30,6 +30,18 @@
 
 <br>
 
+## 🍏 공부 기록표
+
+| 공부 날짜  |              공부 내용              |          개선점           |
+| :--------: | :---------------------------------: | :-----------------------: |
+| 2021-03-07 | 인프런 1, 2강 수강 및 1장 내용 정리 | 강의 재수강 필, 교재 읽기 |
+
+<br>
+
+## 🥭 Reference
+
+- [인프런 운영체제 공룡책 강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98/dashboard)
+
 <div align="center">
 <sub><sup>Written by <a href="https://github.com/dkssyddico">@dkssyddico</a></sup></sub><small>🍎</small>
 </div>

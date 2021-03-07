@@ -1,16 +1,10 @@
 # Chapter 1
 
-> 인프런 강의 및 책을 기반으로 정리
-
-## 서론
+> 인프런 강의 및 교재 기반 정리
 
 ### 운영체제가 뭔가요?
 
 - Operating system: a software that operates a **computer**
-- a software that manages a computer's hardware
-- It also provides a basis for application programs and
-  - acts as an intermediary between
-  - the computer user and the computer hardware
 - ex: Window 10, Linux, Mac OS X
 
   - is a program running at all times on the computer
@@ -23,6 +17,8 @@
 
 - Computer: a machine that processes the **information**
 - calculator is not a machine, but smartphone is
+
+- four components of computer system: hardware, operating system, application programs, user
 
   <br>
 
@@ -66,4 +62,157 @@
 ### 프로그램이 뭔데요?
 
 - Program is a set of **instrunctions**
+
   - that tells a computer's hardware to perform a task
+
+  <br>
+
+### 1.1 Whate Operating Systems Do
+
+- An operating system is
+
+  - a software that manages a computer's hardware
+  - It also provides a basis for application programs and
+    - acts as an intermediary between
+    - the computer user and the computer hardware
+
+- A computer system can be divided roughly into four components
+
+  - the hardware
+  - the operating system
+  - the application programs
+  - and a user
+
+- Defining Operating Systems
+
+  - There are No universally accepted definition of an operating system
+  - A more common definition is that
+    - "the one program running at all times on the computer"
+    - usually called the **kernel**
+  - Along with the kernel, there are two other types of programs:
+    - **system programs**
+    - **application programs**
+
+  <br>
+
+### 1.2 Computer-System Organization
+
+- A modern computer system consist of:
+
+  - one or more CPUs and
+  - a number of device controllers connected through a common bus
+
+- a **bootstrap** program is
+
+  - the first program to run on computer power-on,
+  - and then loads the operating system
+
+- Interrupts
+
+  - Hardware may trigger an **interrupt** at any time
+    - by sending a signal to the CPU, usually by way of the system bus
+    - 키보드 A가 눌렸으면 A라는 문자가 눌렸다는 것을 interrupts라는 방법으로 CPU에게 알려줌
+
+- von Neumann architecture
+
+  - A typical instruction-executiom cycle
+    - first fetches an instruction from memory
+    - and stores that instruction in the **instruction register**
+  - the instruction is then decoded
+    - and may cause operands to be fetched from memory
+    - an stored in some internal register
+  - After the instruction on the operands
+    - has been **executed**,
+    - the result may be stored back in memory
+
+- The wide variety of storage systems can be organized in a hierarchy according to:
+
+  - storage capacity,
+  - and access time
+
+- I/O Structure
+  - A large portion of OS code is dedicated to managing I/O
+
+### 1.3 Computer System Architecture
+
+- Definitions of Computer System Components
+
+  - **CPU** - The hardware that executes instructions.
+  - **Processor** - A physical chip that contains one or more CPUs.
+  - **Core** - The back computation unit of the CPU.
+  - **Multicore** - Including multiple computing cores on the same CPU.
+  - **Multiprocessor** - Including multiple processors.
+
+  <br>
+
+- **Symmetric multiprocessing (SMP)**
+
+  - The most common multiprocessor systems,
+    - in which each peer CPU processor performs all tasks.
+  - **Asymmetric** multiprocessing:
+    - each processor is assigned a specific task.
+
+  <br>
+
+- Multi-core design
+
+  - with several cores on the same processor chip.
+
+  <br>
+
+### 1.4 Operating System Operations
+
+- Multiprogramming
+
+  - runs more than one program at a time.
+
+  - keeps several processes in memory simultaneously.
+
+  - to increase CPU utilization.
+
+<br>
+
+- Multitasking (=multiprocessing)
+
+  - a logical extension of multiprogramming.
+
+  - in which CPU switches jobs so frequently that
+  - users can interact with each job while it is running.
+
+  - **CPU scheduling**:
+
+  - If several processes are ready to run at the same time,
+  - the system must choose which process will run next
+
+<br>
+
+- Two separate mode of operations:
+  - **user mode** and **kernel mode**
+  - to ensure that an incorrect program
+    - cannot cause other programs to execute incorrectly
+
+<br>
+
+### 1.7 Virtualization
+
+- **Virtualization** is
+
+  - a technology that allow us
+    - to abstract the hardware of a single computer
+    - into several different execution environments.
+
+- **VMM**: Virtual Machine Manager
+  - VMware, XEN, WSL, and so on.
+
+<br>
+
+### 1.10 Computing Environments
+
+- Operating Systems in the Variety of Computing Environments
+
+  - Traditional Computing
+  - **Mobile** Computing
+  - **Client-Server** Computing
+  - **Peer-to-Peer** Computing
+  - **Cloud** Computing
+  - **Real-Time** Embedded Systems
