@@ -32,115 +32,252 @@ An Operating System is software that manages a computer's hardware.
 
 <br/>
 
-<div id="1-1"></div>
+# Chapter 1. 서론
 
-## 1.1 What Operating Systems Do
+## 1.1 운영체제가 할 일
 
-- Four components of a computer system:
-  - `hardware`, `operating system`, `application programs` `user`
-  - hardware: CPU, memory, I/O devices
-  - application system: such as word processors, spreadsheets, compilers, and web browsers
-- A computer system consists of:
+컴퓨터 시스템의 구성요소
 
-  - `hardware`, `software`, `data`
+1. 하드웨어 - 기본 계산용 자원 제공
+   1. 중앙 처리 장치(CPU)
+   2. 메모리
+   3. 입출력 장치
+2. 운영체제
+3. 응용 프로그램
+4. 사용자
 
-- Operating system
+컴퓨터 시스템은 다시 하드웨어, 소프트웨어, 데이터로 구성되어 있다고도 할 수 있다.
 
-  - provides **the means for proper use of these resources** in the opration of the computer system.
-  - Controls the hardware and coordinates its use among the various application programs for the various users.
-    <br/>
+**운영체제의 역할: 컴퓨터 시스템이 동작할 때 이들 자원을 적절하게 사용할 수 있는 방법을 제공**
 
-#### 1.1.1 User View
+#### 1.1.1 사용자 관점(User view)
 
-The user's view of the computer varies according to the interface being used.
+- PC: 사용의 용이성을 위해 설계되고 자원의 이용에는 신경쓰지 않는다.
+- 대형 컴퓨터: 자원의 이용을 극대화하도록 설계
+- 워크스테이션: 개인 사용의 용이성과 자원의 이용이 적절히 조화를 이루도록 설계
+- 스마트폰: 사용자 인터페이스로서 터치 스크린을 사용
+- 가전제품/자동차 내 내장형 컴퓨터: 이들의 컴퓨터나 운영체제는 사용자의 개입 없이 작동하도록 설계
 
-- Laptop/PC: Maximise the work(or play) that the user is performing.
-  👉🏼 **Ease of use > resource utilisation**
-- Smartphone/Tablet: Touch screen, voice recognition interface.
-- Home device/automobile: operating systems and applications are designed primarily to run without user intervention.
+#### 1.1.2 시스템 관점(System View)
 
-#### 1.1.2 System View
+- 시스템 관점에서 운영체제를 자원 할당자(resource allocator) 라고 볼 수 있음
+- CS는 문제를 해결하기 위해(사용자의 요구를 처리하기 위해) 여러가지 자원들을 가진다
+  - CPU 시간, 메모리 공간, 파일 저장 공간, 입출력 장치 등 👉🏼 운영체제가 이들을 관리함, 슈퍼바이저의 역할.
+  - 요청을 처리하는 과정에서 자원들이 서로 상충될 수도 있기 때문에 운영체제는 컴퓨터 시스템을 효율적이고 공정하게 운영할 수 있도록 어느 요청에 자원을 할당할지 정해야 한다
+- 즉, 운영체제는 control program. (특히 입출력 장치의 제어와 작동에 깊이 관여함)
 
-From the computer’s point of view, the operating system is the program most intimately involved with the hardware. In this context, OS is a resource allocator.<br/>
-A computer system has many resources that may be required to solve a problem: CPU time, memory space, storage space, I/O devices, and so on. The operating system acts as **the manager of these resources**.
+#### 1.1.3 운영체제의 정의
 
-OS in system view:
+- 운영체제가 존재하는 이유
+  - 운영체제가 우용한 컴퓨터 시스템을 만드는 과정에서 발생하는 문제점을 해결하기 위한 적절한 방법이기 때문
+  - 컴퓨터 시스템의 근본 목적: 사용자의 프로그램 실행 및 문제 해결을 도움 👉🏼 이런 목적으로 하드웨어가 제작
+  - 하드웨어 만으로는 모든 문제 해결을 하는 것이 어렵기 때문에 소프트웨어가 등장
 
-- Must decide how to allocate them to specific programs and users 👉🏼 it can operate the computer system efficiently and fairly.
+## 1.2 컴퓨터 시스템의 구성
 
-- Needs to control the various I/O devices and user programs (OS is a control program).
-  - Manages the execution of user programs to prevent errors and improper use of the computer.
+컴퓨터 시스템 구조에 대한 일반적인 지식
 
-#### 1.1.3 Defining Operating Systems
-
-No completely adequate definition of an operating system.
-
-Why does OS exist?
-
-- Because they offer a reasonable way to solve the problem of creating a usable computing system.
-
-What is the fundamental goal of computer systems?
-
-- to execute programs and to make solving user problems easier.
-- Computer hardware is constructed toward this goal. Since bare hardware alone is not particularly easy to use, application programs are developed. These programs require certain common operations, such as those controlling the I/O devices. The common functions of controlling and allocating resources are then brought together into one piece of software: the operating system.
-  ![](src/img/why-os-exists.jpeg)
-
-- The operating system is the one program running at all times on the computer—usually called the `kernel`. Along with kernel there are two other types of programs in the OS: `system programs`, `application programs`
-  ![](src/img/os-kernel.png)
-
-  - Kernel: A system program in the OS runs at all time
-  - Other system program: A system program doesn't need to run at all time
-  - Application program: All programs not associated with the operation of the system. (e.g., middleware)
-
-### 1.2 Computer-System Organisation
+#### 1.2.1 컴퓨터 시스템 연산(Computer-System Operation)
 
 ![](src/ref/fig-1-2.png)
 
-A ~~modern~~(classical) general-purpose computer system consists of one or more CPUs and a number of device controllers connected through a common bus that provides access between components and shared memory.
+컴퓨터가 동작하기 위해서는 수행할 초기 프로그램을 가져야 한다. 예를 들면 전원이 켜지거나 재부트 될 때도 프로그램이 필요하다. 이 초기 프로그램을 부트스트랩이라고 부르는데, 이 부트스트랩은 ROM이나 EEPROM에 저장된다. 이 부트스트랩은 CPU레지스터로부터 장치 제어기, 메모리 냉ㅇ 등을 포함한 시스텡의 모든 면을 초기화 한다. 부트스트랩 프로그램은 운영체제의 커널을 찾아 메모리에 적재해야 한다.
 
-- Typically, operating systems have a device driver for each device controller.
+커널이 적재되고 수행이 시작되면 시스템과 사용자에게 서비스를 제공할 수 있다. 그리고 이 단계가 끝나면 시스템이 완전히 부트된 상태고 사용자가 서비스를 이용할 준비가 된 것이다!
 
-  - understands the device controller
-  - provides the rest of the operating system with a uniform interface to the device
+이제 시스템은 무슨 사건(event)이 발생하기를 기다린다.(사용자가 앱을 켠다던지, 키보드를 누른다던지, 마우스를 클릭한다던지 등...)
 
-**1.2.1 and 1.2.2 - basics of how such a system operates**
-
-#### 1.2.1 Interrupts
-
-Interrupts are signals sent to the CPU by expternal devices(like I/O devices). They tell the CPU to stop its current activities and execute the appropriate part of the operating system.
-
-##### 1.2.1.1 Overview
+사건이 발생하는 것을 하드웨어나 소프트웨어로부터 인터럽트(interrupt)가 발생했다고 말한다.
 
 ![](src/ref/fig-1-3.png)
 
-- The interrupt must transfer control to the appropriate interrupt service routine.
-- The interrupt architecture must also save the state information of whatever was interrupted, so that it can restore this information after servicing the interrupt.
+#### 1.2.2 저장 장치 구조(Storage Structure)
 
-##### 1.2.1.2 Implementation
+ROM은 변경할 수 없으므로 앞에 설명한 부트스트랩 프로그램과 같은 정적 프로그램을 저장한다. 예를 들어 스마트폰은 공장에서 설치한 프로그램을 저장하기 위해 EEPROM을 사용한다. - ROM: 읽기 전용 메모리 - EEPROM: 전기적으로 소거 가능한 프로그램 가능-읽기 전용 메모리(단 자주 변경할 수 없음)
 
-![](src/ref/fig-1-4.png)
+폰 노이만 구조 시스템에서 실행되는 명령-실행 사이클(instuction-execution cycle)은 먼저 메모리로부터 명령을 인출해 그 명령을 명령 레지스터(instruction register)에 저장한다. 이어서 명령을 해독하고 이것은 메모리로부터 피연산자를 인출해 내부 레지스터에 저장하도록 유발할 수 있다. 메모리 장치는 단지 일련의 메모리 주소만을 인식한다는 사실에 유의하자! 메모리는 이들 주소가 어떻게 생성되었는지도, 어떻게 생성되었는지도 모른다. 우리는 단지 실행중인 프로그램에 의해 생성된 메모리 주소에만 흥미가 있다! 이상적으로는 프로그램과 데이터가 주 메모리에 영구히 존재하기를 원하지만 다음 두 가지의 이유 때문에 불가능하다.
 
-we need more sophisticated interrupt handling features.
+1. 주 메모리는 모든 필요한 프로그램과 데이터를 영구히 저장하기에는 너무 작다.
+2. 주 메모리는 전원이 공급되지 않으면 그 내용을 잃어버리는 휘발성 저장 장치다.
 
-1. The ability to defer interrupt handling during critical processing.
-2. An efficient way to dispatch to the proper interrupt handler for
-   a device.
-3. Multilevel interrupts, so that the operating system can distinguish between high and low-priority interrupts and can respond with the appropriate degree of urgency.
+![](src/ref/storage-device-hierarchy.jpg)
 
-In modern computer hardware, these three features are provided by the CPU and the interrupt-controller hardware. Most CPUs have two interrupt request lines :
+#### 1.2.3 입출력 구조(I/O Structure)
 
-1. The nonmaskable interrupt: it is reserved for events such as unrecoverable memory errors.
+저장 장치는 컴퓨터 내의 여러 형태의 입출력 장치 중의 하나다. 시스템의 신뢰성과 성능에 미치는 중요성 때문에 운영체제 코드의 많은 부분이 입출력을 관리하는데 할애된다.
 
-2. The maskable interrupt: it is used by device controllers to request service. it can be turned off by the CPU before the execution of critical instruction sequences that must not be interrupted.
+![](src/ref/how-system-works.png)
 
-> **interrupts are used throughout modern operating systems to handle asynchronous events.**
+인터럽트 구동 방식의 입출력은 적은 양의 데이터를 전송하는데는 문제가 없지만 디스크 입출력과 같은 대량의 데이터를 전송할 때는 높은 오버헤드를 초래한다. 이 문제를 해결하기 위해 DMA 장치가 사용된다. 한 바이트마다 인터럽트가 발생하는 것이 아니라 블록 전송이 완료될 때마다 인터럽트가 발생한다. CPU의 간섭이 없기 때문에 장치 제어기가 전송 작업을 수행하고 있는 동안 CPU는 다른 작업을 수행할 수 있다. (예를 들어 유튜브에서 영상을 보는 경우 CPU가 할 일이 별로 없다. 네트워크에서 스크린으로 바로 보내주면 됨. 따라서 CPU는 그동안 다른 작업을 수행할 수 있음.)
 
-#### 1.2.2 Storage Structure
+## 1.3 컴퓨터 시스템의 구조
 
-The CPU can load instructions only from memory, so any programs must first be loaded into memory to run. The first program to run on computer power-on is a bootstrap program, which then loads the operating system.<br/><br/>
-Since RAM is volatile—loses its content when power is turned off or otherwise lost—we cannot trust it to hold the bootstrap program. 👉🏼 the computer uses EEPROM(erasable programmable read-only memory: infrequently written to & nonvolotile ↔ RAM )
+1.2에서는 전형적인 컴퓨터 시스템의 일반적인 구조를 봤다. 컴퓨터 시스템은 사용된 범용 처리기의 수에 따라 3가지로 분류가 가능하다.
 
-- EEPROM:
-  1. can be changed but cannot be changed frequently.
-  2. low speed 👉🏼 it contains mostly static programs and data that aren’t frequently used.
-     - Example: the iPhone uses EEPROM to store serial numbers and hardware information about the device.
+- 단일 처리기 시스템(Single-Processor Systems)
+- 다중 처리기 시스템(Multiprocessor Systems)
+- 클러스터형 시스템(Clustered Systems)
+
+#### 1.3.1 단일 처리기 시스템(Single-Processor Systems)
+
+단일 처리기 시스템은 하나의 주 CPU를 가진다. 그리고 이 하나의 CPU 는 사용자 프로세스의 명령어를 포함해 범용 명령어 집합을 수행할 수 있다.
+
+#### 1.3.2 다중 처리기 시스템(Multiprocessor Systems)
+
+다중 처리기 시스템은 주로 서버에 이용되었으나 이후 desktop/laptop으로 이동했다. 최근에는 스마트폰이나 tablet 컴퓨터와 같은 휴대용 장치에도 등장하고 있다.
+
+다중 처리기 시스템의 장점
+
+- 처리량 증가(throughput)
+  - 처리기 수의 증가로 더 짧은 시간에 더 많은 일을 할 수 있기를 바라지만 N개의 처리기를 사용할 경우 속도 증가율은 N 배가 되지 않고, N 보다 작다.
+- 경제적 규모
+  - 여러 개의 단일 시스템에 비해 비용 절약이 가능하다. 이는 처리기가 주변 장치, 대용량 저장 장치, 전원 공급 장치를 공유하고 있기 때문이다.
+- 신뢰성 증가
+  - 한 처리기가 고장 나더라도 시스템이 정지하는 것이 아니라 속도만 느려지게 된다.
+
+다중 처리기 시스템의 형태
+
+- 비대칭적 다중 처리(asymmetric multiprocessing)
+  - 하나의 주 처리기가 시스템을 제어
+- 대칭적 다중 처리(symmetric multiprocessing)
+  - 모든 처리기가 대등하며 처리기 간의 주종관계가 없다.
+    ![](src/ref/SMP.png)
+
+CPU를 설계하는 최근의 경향은 하나의 칩에 여러 개의 코어(core)를 포함하는 것이다. 이런 다중 처리기 시스템을 멀티코어라 부른다. 이들능ㄴ 단일 코어를 가진 여러 개의 칩보다 효율적이다.(칩 내의 통신이 칩 간의 통신보다 빠르고, 전력을 덜 소모한다.)
+
+#### 1.3.3 클러스터형 시스템(Clustered Systems)
+
+클러스터형 시스템은 여러 CPU를 가진 또 다른 시스템의 유형이다. 클러스터 시스템은 둘 이상의 독자적 시스템 또는 노드를 연결하여 구성한다는 점에서 다중 처리기 시스템과 차이가 난다. 일반적으로 클러스터 컴퓨터는 저장 장치를 공유하고 근거리 통신망(Local Area Network, LAN)이나 InfiniBand 같은 고속의 상호 연결망으로 연결된다.
+
+한 클러스터가 네트워크로 연결된 다수의 컴퓨터 시스템으로 구성되므로 클러스터는 고성능 계산 환경을 제공할 수 있다.
+
+## 1.4 운영체제의 구조
+
+운영체제는 프로그램이 수행될 환경을 제공한다. 운영체제의 내부 구조는 매우 다양하지만 그들 사이에 많은 공통점들이 있고 그 공통점들을 이 절에서 알아본다.
+
+운영체제의 가장 중요한 면은 다중 프로그램(Multiprogram)을 할 수 있는 능력이다. 일반적으로 단일 사용자는 CPU나 입출력 장치를 항상 바쁘게 유지하는 것이 불가능하다. 다중프로그래밍은 CPU가 수행할 작업(코드와 데이터)을 항상 하나 가지도록 작업을 구성함으로써 CPU 이용률을 증가시킨다.
+
+방법:<br/>
+운영체제는 한 번에 여러 작업을 메모리에 적재한다.
+![](src/ref/multiprocessing-memory.png)<br/>
+이들 작업들은 처음에는 디스크의 **작업 풀(pool)**에 유지된다. 메모리 내에 동시에 저장할 수 있는 작업의 수는 일반적으로 작업 풀에 둘 수 있는 작업의 수보다 훨씬 적기 때문이다. 작업 풀은 디스크 내의 모든 프로세스로 구성되며 이들은 주 메모리의 할당을 기다린다.
+
+쉽게 말해, 다중 프로그래밍 시스템은 줄 서 있는 임무들이 있고 운영체제가 그 작업을 하나씩 수행한다. 그런데 그 중 어떤 작업은 좀 기다려야 하는 일이라면 그 기다리는 시간 동안에 다른 일을 할 수 있다. 즉, 수행할 작업이 하나라도 있는 한 CPU는 쉬지 않는다.
+
+멀티태스킹은 다중 프로그래밍의 논리적 확장이다. 멀티태스킹 시스템에서는 CPU가 다수의 작업들을 교대로 수행하지만, 매우 빈번하게 교대가 일어나 프로그램이 실행되는 동안에 사용자들은 각자 자기의 프로그램과 상호작용 할 수 있다.
+
+이러한 멀티태스킹 시스템은 사용자와 시스템 간에 직접적인 통신ㅇ르 제공하는 interactive 컴퓨터 시스템을 필요로 한다. 사용자는 키보드나 마우스 등의 입력 장치를 이용해 운영체제나 프로그램에 직접 명령하고 출력 장치의 즉각적인 응답을 기다린다. 따라서 응답 시간이 짧아야 한다.
+
+멀티태스킹 운영체제는 많ㅇ느 사용자가 컴퓨터를 공유할 수 있도록 하기도 한다. 멀티태스킹 시스템에서 각각의 동작이나 명령은 대체로 짧기 때문에 각 사용자는 단지 짧은 시간 동안만 CPU 시간이 필요하다. 따라서 각 사용자는 본인이 전체 컴퓨터를 사용하는 것처럼 느끼지만 실제로는 다수의 사용자가 하나의 컴퓨터를 공유하는 것이다.
+
+이러한 멀티태스킹 운영체제는 각 사용자에게 컴퓨터의 작은 부분을 제공하기 위해 (1) CPU 스케줄링 (2) 다중 프로그래밍(multiprogramming)을 사용한다. 각 사용자는 메모리에 최소한 하나의 독립된 프로그램을 가지고 있다. 프로세스가 수행될 때는 그 프로세스가 종료되거나 입출력을 수행할 필요가 있을 때까지 아주 짧은 시간 동안만 실행된다. 이러한 입출력은 대화식(인터랙티브)일 수 있다. 입력은 사용자의 키보드나 마우스 등으로 들어오고 사람이 키보드를 타이핑 할 때 1초에 7문자면 빠른 편이지만 컴퓨터 입장에서는 아주 느린 것이다. (시간의 상대성!) 이러한 대화식 입력이 진행되는 동안 운영체제는 CPU를 쉬게 냅두는 것이 아니라 다른 사용자의 프로그램으로 신속하게 전환한다.
+
+멀티프로그래밍에서는 여러 작업이 동시에 메모리 위에 유지되어야 한다. 만약 메모리에 보관할 만한 공간이 충분하지 않다면 시스템은 그들 중 몇 개를 선택해야 한다. 이런 결정을 하는 것을 **작업 스케줄링** 이라고 하며 5장에서 만날 수 있다!
+
+## 1.5 운영체제 연산
+
+현대의 운영체제는 인터럽트 구동식(interrupt driven)이다. 실행할 프로세스도 없고, 서비스할 입출력 장치도 없고, 응답해줄 사용자도 없으면 운영체제는 조용히 앉아 무언가가 일어나기를 기다리고만 있을 것이다. 사건은 대부분 인터럽트나 트랩을 발생시켜 신호를 보낸다. 여기서 트랩도 인터럽트의 일종인데, 유효하지 않은 메모리 접근 등으로 발생하는 오류나, 소프트웨어에 의해 생성되는 인터럽트를 말한다.
+
+운영체제와 사용자는 하드웨어와 소프트웨어 자원을 공유하기 때문에 혹시나 사용자 프로그램에 오류가 있더라도 현재 수행중인 프로그램에만 문제를 일으키도록 보장해야 한다.
+
+#### 1.5.1 이중 연산 모드
+
+운영체제가 슈퍼바이저로서 일을 잘 하게 하기 위해 운영체제를 크게 2가지 모드로 나눠 하드웨어에 자원을 지원을 제공하는 것이다. 즉, 두개의 독립된 연산 모드 (1)사용자 모드 (2)커널 모드(슈퍼바이저 모드, 시스템 모드, 특권 모드 라고도 부른다)
+
+![](src/ref/transition-from-user-to-kernel-mode.png)
+
+시스템 부트 시 하드웨어는 커널 모드에서 시작한다. 이어 운영체제가 적재되고, 사용자 모드에서 사용자 프로세스가 시작된다. 트랩이나 인터럽트가 발생할 때마다 하드웨어는 사용자 모드에서 커널 모드로 전환한다. 그러므로 운영체제가 컴퓨터의 제어를 얻을 때마다 항상 커널 모드에 있게 된다. 시스템은 사용자 프로그램으로 제어를 넘기기 전에 항상 사용자 모드로 전환한다.
+
+이러한 이중 모드는 사용자와 운영체제 서로를 보호하는 방법을 제공한다.
+
+// VMM 에 대한 추가 공부 필요
+
+#### 1.5.2 타이머
+
+사용자의 프로그램이 무한 루프에 빠지거나 시스템 서비스 호출에 실패해 제어가 운영체제로 복귀하지 않는 경우가 없도록 타이머를 사용할 수 있다. 타이머는 지정된 시간 이후 컴퓨터를 인터럽트 하도록 설정할 수 있다.
+
+## 1.6 프로세스 관리
+
+프로그램은 그 명령이 CPU에 의해 수행되지 않으면 아무 일도 할 수 없다. 언급한 것처럼 실행중인 프로그램이 프로세스이다. 컴파일러와 같은 하나의 멀티태스킹 사용자 프로그램은 하나의 프로세스가 된다.
+
+프로세스는 자신의 일을 수행하기 위해 CPU 시간, 메모리, 파일, 그리고 입출력 장치를 포함한 여러 가지 자원을 필요로 한다. 이러한 자원은 프로세스가 생성될 때 제공될 수도 있고 실행되는 동안 할당될 수도 있다.
+
+프로그램 그 자체는 프로세스가 아니다! 하나의 프로그램은 디스크에 저장된 파일의 내용과 같이 수동적인 개체인 반면 프로세스는 능동적이다. 여기서 능동적이라 함은 다음 수행할 명령을 지정하는 프로그램 카운터(program counter)를 가졌다는 것이다. 👉🏼 thread 에서 자세히 보자!
+
+CPU는 두 개의 프로세스가 동일한 프로그램과 연관되어 있더라도 별도의 수행 순서로 간주하고 그 프로세스가 끝날 때까지 프로세스의 명령들을 차례대로 수행한다. 다중 스레드 프로세스는 여러개의 프로그램 카운터를 가지고 있고 이 카운터들은 각 스레드가 실행할 다음 명령어를 가리키게 된다.
+
+운영체제는 프로세스 관리와 연관해 다음과 같은 활동에 대한 책임을 진다.
+
+- CPU에 프로세스와 스레드를 스케줄 하기
+- 사용자 프로세스와 시스템 프로세스의 생성과 제거
+- 프로세스의 일시 중지와 재수행
+- 프로세스 동기화를 위한 기법 제공
+- 프로세스 통신을 위한 기법 제공
+
+## 1.7 메모리 관리
+
+주 메모리는 CPU와 입출력 장치에 의하여 공유되는 빠른 접근이 가능한 데이터 저장소다. 폰 노이만 방식의 컴퓨터에서는 중앙 처리기가 명령어 인출 주기(instruction fetch-style)동안 주 메모리로부터 명령어를 읽고, 자료 인출 주기(data fetch-cycle)동안 주 메모리로부터 데이터를 읽고 쓴다. 주 메모리는 일반적으로 CPU가 직접 주소를 지정할 수 있고 또 CPU가 직접 접근 할 수 있는 유일한 대량 메모리다.
+
+프로그램이 수행되기 위해서는 반드시 절대 주소로 매핑(mapping) 되고 메모리에 적재되어야 한다. 프로그램을 수행하면서 이런 절대 주소를 생성해 메모리의 프로그램 명렁어와 데이터에 접근한다. 프로그램이 종료되면 프로그램이 차지하던 메모리 공간은 가용공간이 되고 그 자리에 다음 프로그램이 적재되어 수행될 수 있다.
+
+CPU 이용률과 사용자에 대한 응답 속도를 개선하기 위해 우리는 메모리에 여러개의 프로그램을 유지해야 하고 이를 위한 메모리 관리 기법이 필요하다. 이런 기법에는 여러 종류가 있고 여러 접근 방법을 반영하는데 효율성은 상황에 따라 달라진다. 특정 시스템에 대한 메모리 관리 기법의 선택은 특히 시스템의 하드웨어 설계에 좌우되고 각 알고리즘은 자신의 하드웨어 지원을 필요로 한다.
+
+운영체제가 메모리를 위애 하는 일
+
+- 메모리의 어느 부분이 현재 사용중이고 누구에 의해 사용되고 있는지 추적하기
+- 어떤 프로세스들을 메모리에 적재하고 제거할 지 정하기
+- 필요에 따라 메모리 공간을 할당하거나 회수하기
+
+## 1.8 저장장치 관리
+
+#### 1.8.1 파일 시스템 관리
+
+#### 1.8.2 대용량 저장장치 관리
+
+#### 1.8.3 캐싱(cashing)
+
+#### 1.8.4 입출력 시스템(I/O Systems)
+
+## 1.9 보호와 보안
+
+## 1.10 커널 자료 구조
+
+#### 1.10.1 리스트, 스택 및 큐
+
+#### 1.10.2 트리
+
+#### 1.10.3 해시 함수와 맵
+
+#### 1.10.4 비트맵
+
+## 1.11 계산 환경
+
+#### 1.11.1 전통적 계산(Traditional Computing)
+
+#### 1.11.2 이동형 컴퓨팅(mobile computing)
+
+#### 1.11.3 분산 시스템(Distributes Systems)
+
+#### 1.11.4 클라이언트 서버 계산(Client-Server Computing)
+
+#### 1.11.5 피어 간 계산(Peer-to-Peer Computing)
+
+#### 1.11.6 가상화(Virtualisation)
+
+#### 1.11.7 클라우드 컴퓨팅
+
+#### 1.11.8 실시간 내장형 시스템(Real-Time Embedded Systems)
+
+## 1.12 오픈소스 운영체제
+
+#### 1.12.1 역사
+
+#### 1.12.2 Linux
+
+#### 1.12.3 BSD Unix
+
+#### 1.12.4 Solaris
+
+#### 1.12.5 학습 도구로서 오픈 소스 시스템
+
+#### 1.13 요약(Summary)
