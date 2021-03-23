@@ -4,8 +4,8 @@
 
 <div align="center">
 
-<h3>Woolim Lee</h3>
-<p>Software Engineer 스타트업</p>
+<h3>Woolim Lee(NoMoreBuild)</h3>
+<p>Software Engineer at 스타트업</p>
 
 ![Status](https://img.shields.io/badge/Status-Study%20Hard-blue.svg)
 ![Start Date](https://img.shields.io/badge/Start%20Date-2021--03--01-23d16b.svg)
@@ -19,12 +19,12 @@
 
 ## 스터디 정리 요약 목록
 
-| 챕터 | 시작 날짜  | 종료 날짜  |             링크             |
-| :--: | :--------: | :--------: | :--------------------------: |
-|  1   | 2021-03-01 | 2021-03-07 | [:link:](chapter1/README.md) |
+| 챕터 | 시작 날짜  | 종료 날짜 |             링크             |
+| :--: | :--------: | :-------: | :--------------------------: |
+|  1   | 2021-03-01 |     -     | [:link:](chapter1/README.md) |
 
 <div align="center">
 
-<sub><sup>Written by <a href="https://github.com/NoMoreBuild">@NoMoreBuild</a></sup></sub><small>🍔</small>
+<sub><sup>Written by <a href="https://github.com/NoMoreBuild">@NoMoreBuild</a></sup></sub><small>📚</small>
 
 </div>
